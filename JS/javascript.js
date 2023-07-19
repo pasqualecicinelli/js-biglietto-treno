@@ -16,6 +16,8 @@ console.log('Età: ' + age);
 
 const price = (km * 0.21);
 
+
+const sconto = '';
 const priceForMinor = '';
 const priceForSenior = '';
 
@@ -29,12 +31,13 @@ if (isNaN(km) || isNaN(age)) {
     alert('ATTENZIONE Inserire solo caratteri numerici')
 } else {
 
-//SE L'ETA' E' INFERIORE A 18 CALCOLO IL PREZZO SOTTRAENDO IL 20%
+    //SE L'ETA' E' INFERIORE A 18 CALCOLO IL PREZZO SOTTRAENDO IL 20%
 
     if (age < 18) {
 
-        const priceForMinor = ((price / 100) * 20);
-        console.log('Prezzo minorenne: ' + priceForMinor);
+        const sconto = ((price / 100) * 20);
+        console.log('Prezzo minorenne: ' + sconto);
+        const priceForMinor = (price - sconto);
 
         function roundToTwo(priceForMinor) {
             return +(Math.round(priceForMinor + "e+2") + "e-2");
@@ -47,8 +50,9 @@ if (isNaN(km) || isNaN(age)) {
 
     } else if (age > 65) {
 
-        const priceForSenior = ((price / 100) * 40);
-        console.log('Prezzo Anziano: ' + priceForSenior);
+        const sconto = ((price / 100) * 40);
+        console.log('Prezzo Anziano: ' + sconto);
+        const priceForSenior = (price - sconto);
 
         function roundToTwo(priceForSenior) {
             return +(Math.round(priceForSenior + "e+2") + "e-2");
