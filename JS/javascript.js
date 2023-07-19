@@ -28,8 +28,16 @@ INVIA UN ALERT ALL'UTENTE ALTRIMENTI VA AVANTI */
 
 if (isNaN(km) || isNaN(age)) {
 
-    alert('ATTENZIONE Inserire solo caratteri numerici')
+    alert('ATTENZIONE Inserire solo caratteri numerici');
+
+    //CONTROLLO SULL'ETA' CHE SIA INFERIORE A 120 ANNI
+
+} else if (age > 120) {
+
+    alert('ATTENZIONE Inserire un\' età corretta');
+
 } else {
+
 
     //SE L'ETA' E' INFERIORE A 18 CALCOLO IL PREZZO SOTTRAENDO IL 20%
 
