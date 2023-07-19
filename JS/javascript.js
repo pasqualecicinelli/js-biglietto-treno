@@ -17,7 +17,7 @@ console.log('Età: ' + age);
 const price = (km * 0.21);
 
 
-const sconto = '';
+const discount = '';
 const priceForMinor = '';
 const priceForSenior = '';
 
@@ -35,14 +35,14 @@ if (isNaN(km) || isNaN(age)) {
 
     if (age < 18) {
 
-        const sconto = ((price / 100) * 20);
-        console.log('Prezzo minorenne: ' + sconto);
-        const priceForMinor = (price - sconto);
+        const discount = ((price / 100) * 20);
+        console.log('Sconto minorenne: ' + discount);
+        const priceForMinor = (price - discount);
 
         function roundToTwo(priceForMinor) {
             return +(Math.round(priceForMinor + "e+2") + "e-2");
         }
-        console.log(roundToTwo(priceForMinor));
+        console.log('Prezzo Minorenne: ' + roundToTwo(priceForMinor));
 
         document.getElementById('print').innerHTML = roundToTwo(priceForMinor) + ' €';
 
@@ -50,14 +50,14 @@ if (isNaN(km) || isNaN(age)) {
 
     } else if (age > 65) {
 
-        const sconto = ((price / 100) * 40);
-        console.log('Prezzo Anziano: ' + sconto);
-        const priceForSenior = (price - sconto);
+        const discount = ((price / 100) * 40);
+        console.log('Sconto Anziano: ' + discount);
+        const priceForSenior = (price - discount);
 
         function roundToTwo(priceForSenior) {
             return +(Math.round(priceForSenior + "e+2") + "e-2");
         }
-        console.log(roundToTwo(priceForSenior));
+        console.log('Prezzo Anziano: ' + roundToTwo(priceForSenior));
 
         document.getElementById('print').innerHTML = roundToTwo(priceForSenior) + ' €';
 
@@ -70,7 +70,7 @@ if (isNaN(km) || isNaN(age)) {
         function roundToTwo(price) {
             return +(Math.round(price + "e+2") + "e-2");
         }
-        console.log(roundToTwo(price));
+        console.log('Prezzo Standard: ' + roundToTwo(price));
 
         document.getElementById('print').innerHTML = roundToTwo(price) + ' €';
     }
