@@ -26,7 +26,7 @@ km * 0.21
 
 ### ALTRIMENTI SE 
 
-- età > 64 sconto 40%
+- età > 65 sconto 40%
 
 ### ALTRIMENTI
 
