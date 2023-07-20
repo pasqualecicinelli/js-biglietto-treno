@@ -47,12 +47,10 @@ if (isNaN(km) || isNaN(age)) {
         console.log('Sconto minorenne: ' + discount);
         const priceForMinor = (price - discount);
 
-        function roundToTwo(priceForMinor) {
-            return +(Math.round(priceForMinor + "e+2") + "e-2");
-        }
-        console.log('Prezzo Minorenne: ' + roundToTwo(priceForMinor));
+        
+        console.log('Prezzo Minorenne: ' + priceForMinor.toFixed(2));
 
-        document.getElementById('print').innerHTML = roundToTwo(priceForMinor) + ' €' + ' è stato applicato uno sconto del 20% in quanto minorenne';
+        document.getElementById('print').innerHTML = (priceForMinor.toFixed(2)) + ' €' + ' è stato applicato uno sconto del 20% in quanto minorenne';
 
         //ALTRIMENTI SE L'ETA' E' MAGGIORE DI 65 CALCOLO IL PREZZO SOTTRAENDO IL 40%
 
@@ -62,12 +60,10 @@ if (isNaN(km) || isNaN(age)) {
         console.log('Sconto Anziano: ' + discount);
         const priceForSenior = (price - discount);
 
-        function roundToTwo(priceForSenior) {
-            return +(Math.round(priceForSenior + "e+2") + "e-2");
-        }
-        console.log('Prezzo Anziano: ' + roundToTwo(priceForSenior));
+       
+        console.log('Prezzo Anziano: ' + priceForSenior.toFixed(2));
 
-        document.getElementById('print').innerHTML = roundToTwo(priceForSenior) + ' €' + ' è stato applicato uno sconto del 40% in quanto over 65';
+        document.getElementById('print').innerHTML = (priceForSenior.toFixed(2)) + ' €' + ' è stato applicato uno sconto del 40% in quanto over 65';
 
         //ALTRIMENTI RESTA IL PREZZO STANDARD
 
@@ -75,12 +71,10 @@ if (isNaN(km) || isNaN(age)) {
 
         console.log('Prezzo intero: ' + price);
 
-        function roundToTwo(price) {
-            return +(Math.round(price + "e+2") + "e-2");
-        }
-        console.log('Prezzo Standard: ' + roundToTwo(price));
+       
+        console.log('Prezzo Standard: ' + price.toFixed(2));
 
-        document.getElementById('print').innerHTML = roundToTwo(price) + ' €' + ' prezzo normale';
+        document.getElementById('print').innerHTML = (price.toFixed(2)) + ' €' + ' prezzo normale';
     }
 
 }
