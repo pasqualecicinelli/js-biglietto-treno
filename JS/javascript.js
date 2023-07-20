@@ -43,7 +43,7 @@ if (isNaN(km) || isNaN(age)) {
 
     if (age < 18) {
 
-        const discount = ((price / 100) * 20);
+        const discount = ((price * 20) / 100 );
         console.log('Sconto minorenne: ' + discount);
         const priceForMinor = (price - discount);
 
@@ -52,13 +52,13 @@ if (isNaN(km) || isNaN(age)) {
         }
         console.log('Prezzo Minorenne: ' + roundToTwo(priceForMinor));
 
-        document.getElementById('print').innerHTML = roundToTwo(priceForMinor) + ' €';
+        document.getElementById('print').innerHTML = roundToTwo(priceForMinor) + ' €' + ' è stato applicato uno sconto del 20% in quanto minorenne';
 
         //ALTRIMENTI SE L'ETA' E' MAGGIORE DI 65 CALCOLO IL PREZZO SOTTRAENDO IL 40%
 
     } else if (age > 65) {
 
-        const discount = ((price / 100) * 40);
+        const discount = ((price * 40) / 100 );
         console.log('Sconto Anziano: ' + discount);
         const priceForSenior = (price - discount);
 
@@ -67,7 +67,7 @@ if (isNaN(km) || isNaN(age)) {
         }
         console.log('Prezzo Anziano: ' + roundToTwo(priceForSenior));
 
-        document.getElementById('print').innerHTML = roundToTwo(priceForSenior) + ' €';
+        document.getElementById('print').innerHTML = roundToTwo(priceForSenior) + ' €' + ' è stato applicato uno sconto del 40% in quanto over 65';
 
         //ALTRIMENTI RESTA IL PREZZO STANDARD
 
@@ -80,7 +80,7 @@ if (isNaN(km) || isNaN(age)) {
         }
         console.log('Prezzo Standard: ' + roundToTwo(price));
 
-        document.getElementById('print').innerHTML = roundToTwo(price) + ' €';
+        document.getElementById('print').innerHTML = roundToTwo(price) + ' €' + ' prezzo normale';
     }
 
 }

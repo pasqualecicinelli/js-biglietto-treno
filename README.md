@@ -14,7 +14,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 - Chiedere all'utente attraverso promnt
     - kilometri (km) da percorrere (controllo varibili che siano caratteri numerici)
-    - età del passeggero (controllo varibili che siano caratteri numerici)
+    - età del passeggero (controllo varibili che siano caratteri numerici) e (controllo sull'età che sia inferiore a 120 anni)
 
 ### CALCOLO PREZZO
 
