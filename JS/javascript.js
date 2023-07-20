@@ -1,12 +1,12 @@
 //CHIEDO I KM DA PERCORRERE
 
-const km = prompt('Inserisci il numero di chilometri che vuole percorrere:')
+const km = parseFloat(prompt('Inserisci il numero di chilometri che vuole percorrere:'));
 
 console.log('Kilometri da percorrere: ' + km);
 
 //CHIEDO L'ETA' DEL PASSEGERO
 
-const age = prompt('Inserisci l\'età del passeggero');
+const age = parseInt(prompt('Inserisci l\'età del passeggero'));
 
 console.log('Età: ' + age);
 
@@ -17,9 +17,9 @@ console.log('Età: ' + age);
 const price = (km * 0.21);
 
 
-const discount = '';
-const priceForMinor = '';
-const priceForSenior = '';
+const discount = 0;
+const priceForMinor = 0;
+const priceForSenior = 0;
 
 console.log('Prezzo intero: ' + price);
 
@@ -43,7 +43,7 @@ if (isNaN(km) || isNaN(age)) {
 
     if (age < 18) {
 
-        const discount = ((price * 20) / 100 );
+        const discount = ((price * 20) / 100);
         console.log('Sconto minorenne: ' + discount);
         const priceForMinor = (price - discount);
 
@@ -58,7 +58,7 @@ if (isNaN(km) || isNaN(age)) {
 
     } else if (age > 65) {
 
-        const discount = ((price * 40) / 100 );
+        const discount = ((price * 40) / 100);
         console.log('Sconto Anziano: ' + discount);
         const priceForSenior = (price - discount);
 
